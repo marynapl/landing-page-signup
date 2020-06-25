@@ -4,11 +4,11 @@ body {
     font-size: 16px;
 }
 
-input,
+/*input,
 select,
 textarea {
-    max-width: 280px;
-}
+    max-width: 15rem;
+}*/
 
 .page-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/banner.jpg);
