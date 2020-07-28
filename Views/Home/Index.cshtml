@@ -22,20 +22,44 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form class="needs-validation">
                     <div class="form-group">
                         <label for="userName" class="col-form-label">Name</label>
                         <input type="email" class="form-control" id="userName" />
+                        <div class="invalid-feedback">
+                            Name is required
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="userEmail" class="col-form-label">Email</label>
-                        <input type="text" class="form-control" id="userEmail" />
+                        <input type="email" class="form-control" id="userEmail" />
+                        <div class="invalid-feedback">
+                            Email is invalid
+                        </div>
                     </div>
                 </form>
+                <div class="alert alert-success d-none" role="alert" id="success">
+                    Thank you for subscribing! Promo code: <strong>FIRST25</strong>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Sign-up</button>
+                <div class="invalid-feedback">test</div>
+                <button class="btn btn-primary" type="submit" id="subscribeButton">Sign-up now</button>
             </div>
         </div>
     </div>
 </div>
+
+@section scripts {
+    @Scripts.Render("~/Scripts/custom/subscribe.js")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            subscribe.init();
+
+            // On modal close
+            $('#signupModal').on('hidden.bs.modal', function (e) {
+                subscribe.clear();
+            })
+        });
+    </script>
+}
