@@ -4,8 +4,8 @@ This is an example of a landing page banner with a sign-up form to collect leads
 
 ## Example
 
-<img align="left" width="200" src="images/landing-page-banner-1.png" />
-<img align="left" width="200" src="images/landing-page-banner-2.png" />
+<img align="left" width="450" src="images/landing-page-banner-1.png" />
+<img width="450" src="images/landing-page-banner-2.png" />
 
 ## Getting started
 
